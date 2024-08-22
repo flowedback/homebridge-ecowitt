@@ -1,7 +1,7 @@
 {
   "private": false,
   "displayName": "Homebridge Ecowitt",
-  "name": "flowedback/homebridge-ecowitt",
+  "name": "@flowedback/homebridge-ecowitt",
   "version": "1.4.1",
   "description": "Provides support for a wide range of Ecowitt sensors.",
   "license": "Apache-2.0",
