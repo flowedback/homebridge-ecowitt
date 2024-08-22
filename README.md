@@ -1,6 +1,6 @@
 # Ecowitt Sensors Homebridge Plugin
 
-This is a fork of [https://github.com/ochong/homebridge-ecowitt](https://github.com/ochong/homebridge-ecowitt) which is a fork of [https://github.com/spatialdude/homebridge-ecowitt](https://github.com/spatialdude/homebridge-ecowitt). This fork is fixing the support for GW2000 and also adding support for the brand new WS-85. I'm aware the code here is not great, but I only did the very MVP to get things running stable for me. I also only focused on the behavior of devices I own (GW2000 and WS-85) so contributions fixing or extending behavior of other gateways or sensors are welcome!
+This is a fork of [https://github.com/pavelserbajlo/homebridge-ecowitt] which is a fork of (https://github.com/pavelserbajlo/homebridge-ecowitt) [https://github.com/ochong/homebridge-ecowitt](https://github.com/ochong/homebridge-ecowitt) which is a fork of [https://github.com/spatialdude/homebridge-ecowitt](https://github.com/spatialdude/homebridge-ecowitt). This fork is fixing the support for GW2000 and also adding support for the brand new WS-85. I'm aware the code here is not great, but I only did the very MVP to get things running stable for me. I also only focused on the behavior of devices I own (GW2000 and WS-85) so contributions fixing or extending behavior of other gateways or sensors are welcome!
 
 A Homebridge plugin providing support for a wide range of **Ecowitt** sensors.
 
