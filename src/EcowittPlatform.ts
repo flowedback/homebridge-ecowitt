@@ -13,6 +13,7 @@ import { PLATFORM_NAME, PLUGIN_NAME } from './settings';
 import { GW1000 } from './GW1000';
 import { GW1100 } from './GW1100';
 import { GW2000 } from './GW2000';
+import { WS3910 } from './WS3910';
 import { WH25 } from './WH25';
 import { WH31 } from './WH31';
 import { WH40 } from './WH40';
@@ -23,6 +24,7 @@ import { WH57 } from './WH57';
 import { WH65 } from './WH65';
 import { WN34 } from './WN34';
 import { WS85 } from './WS85';
+import { WS90 } from './WS90';
 
 import * as restify from 'restify';
 import * as crypto from 'crypto';
@@ -196,10 +198,10 @@ export class EcowittPlatform implements DynamicPlatformPlugin {
 
   registerAccessories(dataReport) {
     const stationTypeInfo = dataReport?.stationtype.match(
-      /(EasyWeather|GW[12][01]00(?:[ABC]?))_?(.*)/,
+      /(WS3910|EasyWeather|GW[12][01]00(?:[ABC]?))_?(.*)/,
     );
     const modelInfo = dataReport?.model.match(
-      /(HP2551CA|GW[12][01]00)[ABC]?_?(.*)/,
+      /(WS3910|HP2551CA|GW[12][01]00)[ABC]?_?(.*)/,
     );
 
     this.log.info('stationTypeInfo:', JSON.stringify(stationTypeInfo));
@@ -225,6 +227,7 @@ export class EcowittPlatform implements DynamicPlatformPlugin {
           }
           break;
 
+		case 'WS3910':
         case 'HP2551CA':
           this.baseStationInfo.softwareRevision = dataReport.stationtype;
           this.baseStationInfo.firmwareRevision = modelInfo[2];
@@ -402,6 +405,10 @@ export class EcowittPlatform implements DynamicPlatformPlugin {
       case 'WS85':
         sensor.accessory = new WS85(this, accessory);
         break;
+
+	  case 'WS90':
+		sensor.accessory = new WS90(this, accessory);
+		break;
 
       default:
         this.log.error('Unhandled sensor type:', sensor.type);
