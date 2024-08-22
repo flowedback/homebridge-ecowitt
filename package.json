@@ -1,16 +1,16 @@
 {
   "private": false,
   "displayName": "Homebridge Ecowitt",
-  "name": "@pserb/homebridge-ecowitt",
+  "name": "flowedback/homebridge-ecowitt",
   "version": "1.4.1",
   "description": "Provides support for a wide range of Ecowitt sensors.",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/pavelserbajlo/homebridge-ecowitt.git"
+    "url": "git://github.com/flowedback/homebridge-ecowitt.git"
   },
   "bugs": {
-    "url": "https://github.com/pavelserbajlo/homebridge-ecowitt/issues"
+    "url": "https://github.com/flowedback/homebridge-ecowitt/issues"
   },
   "engines": {
     "node": ">=10.17.0",
